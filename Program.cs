@@ -18,7 +18,7 @@ namespace pngGenerator
         {
             Console.WriteLine("pngGenerator");
             //Sub(args);
-            if (!Sub(new string[] { "blue" }))
+            if (!Sub(new string[] { "16Mcolors" }))
             {
                 Console.WriteLine();
                 Console.WriteLine("Press key to exit");
@@ -35,8 +35,8 @@ namespace pngGenerator
                 return false;
             }
 
-            int bitmapWidth = 640;
-            int bitmapHeight = 800;
+            int bitmapWidth = 4096;     // 4k!
+            int bitmapHeight = 4096;    // 4k!
 
             var bitmap = new Bitmap(bitmapWidth, bitmapHeight);
 
@@ -52,19 +52,25 @@ namespace pngGenerator
             int dataBytesSize = bitmapStride * bitmapHeight;
             byte[] rgbaValues = new byte[dataBytesSize];
 
-            for (int y = 0; y < bitmapHeight; y++)
+
+            for (int g = 0; g <= 255; ++g )
+                for (int r = 0; r <= 255; ++r)
+                    for (int b = 0; b <= 255; ++b)
             {
-                for (int x = 0; x < bitmapWidth; x++)
-                {
-                    int index = (bitmapStride * y) + (bitmapComponents * x);
+                // x and y indices of a block of 256x256 pixels with same G value
+                // We place 256 such blocks, only R and G vary inside
+                int gY = g / 16;
+                int gX = g - 16*gY;
+                int x = 256 * gX + r;
+                int y = 256 * gY + b;
+                int pixelIndex = (bitmapStride * y) + (bitmapComponents * x);
 
-                    rgbaValues[index + 0] = (byte)(255 * (float)y / bitmapHeight);      // B
-                    rgbaValues[index + 1] = 0;                                          // G
-                    rgbaValues[index + 2] = (byte)(255 * (float)x / bitmapWidth);       // R
-                    rgbaValues[index + 3] = 255;                                        // A
-                }
+                rgbaValues[pixelIndex + 0] = (byte)b;        // B
+                rgbaValues[pixelIndex + 1] = (byte)g;    // G
+                rgbaValues[pixelIndex + 2] = (byte)r;    // R
+                rgbaValues[pixelIndex + 3] = 255;        // A
             }
-
+        
             Marshal.Copy(rgbaValues, 0, bitmapData.Scan0, dataBytesSize);
             bitmap.UnlockBits(bitmapData);
 
