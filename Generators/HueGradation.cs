@@ -9,9 +9,9 @@ namespace pngGenerator.Generators
 {
     public class HueGradation : BaseGenerator
     {
-        public override String Filename { get { return "hue"; } }
+        public override String Filename { get { return "hueGradation"; } }
         public override int BitmapWidth { get { return 360; } }
-        public override int BitmapHeight { get { return 60; } }
+        public override int BitmapHeight { get { return 360; } }
 
         public override void FillPixelArray()
         {

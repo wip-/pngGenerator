@@ -9,7 +9,7 @@ namespace pngGenerator.Generators
 {
     public class HuePalette : BaseGenerator
     {
-        public override String Filename { get { return "hue"; } }
+        public override String Filename { get { return "huePalette"; } }
         public override int BitmapWidth { get { return 360; } }
         public override int BitmapHeight { get { return 60; } }
 

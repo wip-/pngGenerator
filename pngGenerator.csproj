@@ -35,6 +35,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +46,7 @@
     <Compile Include="Generators\All24bppColors.cs" />
     <Compile Include="Generators\BaseGenerator.cs" />
     <Compile Include="Generators\BlueRedGradation.cs" />
+    <Compile Include="Generators\Quarter24bppColors.cs" />
     <Compile Include="Generators\HueGradation.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Generators\HuePalette.cs" />
@@ -54,7 +56,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
