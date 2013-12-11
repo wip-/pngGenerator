@@ -47,6 +47,7 @@
     <Compile Include="Generators\BlueRedGradation.cs" />
     <Compile Include="Generators\HueGradation.cs" />
     <Compile Include="Helpers.cs" />
+    <Compile Include="Generators\HuePalette.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -15,11 +15,13 @@ namespace pngGenerator.Generators
 
         public override void FillPixelArray()
         {
-            for (int y = 0; y < BitmapHeight; y++)
             for (int x = 0; x < BitmapWidth; x++)
             {
                 Color color = Helpers.HSL2RGB((double)x/BitmapWidth, 1.0, 0.5);
-                SetPixelArgb(x, y, 255, color.R, color.G, color.B);
+                for (int y = 0; y < BitmapHeight; y++)
+                {
+                    SetPixelArgb(x, y, 255, color.R, color.G, color.B);
+                }                
             }
         }
     }
