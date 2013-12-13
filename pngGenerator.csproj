@@ -46,8 +46,11 @@
     <Compile Include="Generators\All24bppColors.cs" />
     <Compile Include="Generators\BaseGenerator.cs" />
     <Compile Include="Generators\BlueRedGradation.cs" />
+    <Compile Include="Generators\LightnessGradation.cs" />
     <Compile Include="Generators\Quarter24bppColors.cs" />
     <Compile Include="Generators\HueGradation.cs" />
+    <Compile Include="Generators\RedGradation.cs" />
+    <Compile Include="Generators\SaturationGradation.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Generators\HuePalette.cs" />
     <Compile Include="Program.cs" />
