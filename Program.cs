@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.IO;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
+using System.IO;
 using pngGenerator.Generators;
 
 namespace pngGenerator
@@ -32,7 +26,7 @@ namespace pngGenerator
             // Just switch between generators HERE:
             //BaseGenerator generator = new All24bppColors();
             //BaseGenerator generator = new BlueRedGradation();
-            BaseGenerator generator = new Blue80Red20();
+            BaseGenerator generator = new HueGradation64();
 
 
 

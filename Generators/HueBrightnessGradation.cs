@@ -15,8 +15,9 @@ namespace pngGenerator.Generators
             {
                 for (int y = 0; y < BitmapHeight; y++)
                 {
-                    Color color = Helpers.HSL2RGB((double)x / BitmapWidth, 0.5, (double)y / BitmapHeight);
-                    SetPixelArgb(x, y, 255, color.R, color.G, color.B);
+                    NormalizedColor color = 
+                        Helpers.HSL2RGB((double)x / BitmapWidth, 0.5, (double)y / BitmapHeight);
+                    SetPixelArgb(x, y, color);
                 }
             }
         }

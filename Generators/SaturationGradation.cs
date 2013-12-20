@@ -13,10 +13,10 @@ namespace pngGenerator.Generators
         {
             for (int x = 0; x < BitmapWidth; x++)
             {
-                Color color = Helpers.HSL2RGB(0.0, x/255.0, 0.5);
+                NormalizedColor color = Helpers.HSL2RGB(0.0, x/255.0, 0.5);
                 for (int y = 0; y < BitmapHeight; y++)
                 {
-                    SetPixelArgb(x, y, 255, color.R, color.G, color.B);
+                    SetPixelArgb(x, y, color);
                 }
             }
         }

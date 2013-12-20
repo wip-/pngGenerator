@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace pngGenerator.Generators
 {
-    public class HueGradation : BaseGenerator
+    // hue gradation, but with color depth == 64
+    public class HueGradation64 : BaseGenerator
     {
-        public override String Filename { get { return "hueGradation"; } }
-        public override int BitmapWidth { get { return 360; } }
-        public override int BitmapHeight { get { return 360; } }
+        public override String Filename { get { return "hueGradation64"; } }
+        public override int BitmapWidth { get { return 512; } }
+        public override int BitmapHeight { get { return 512; } }
+        public override PixelFormat PixelFormat { get { return PixelFormat.Format64bppArgb; } }
 
         public override void FillPixelArray()
         {
