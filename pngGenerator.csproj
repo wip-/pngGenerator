@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generators\All260KColors.cs" />
     <Compile Include="Generators\All24bppColors.cs" />
     <Compile Include="Generators\BaseGenerator.cs" />
     <Compile Include="Generators\Blue80Red20.cs" />
