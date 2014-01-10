@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Generators\All260KColors.cs" />
     <Compile Include="Generators\All24bppColors.cs" />
+    <Compile Include="Generators\AlphaGradation.cs" />
     <Compile Include="Generators\BaseGenerator.cs" />
     <Compile Include="Generators\Blue80Red20.cs" />
     <Compile Include="Generators\BlueRedGradation.cs" />
@@ -57,6 +58,8 @@
     <Compile Include="Generators\HueGradation.cs" />
     <Compile Include="Generators\RedGradation.cs" />
     <Compile Include="Generators\SaturationGradation.cs" />
+    <Compile Include="Generators\Square.cs" />
+    <Compile Include="Generators\Stripes.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Generators\HuePalette.cs" />
     <Compile Include="Program.cs" />

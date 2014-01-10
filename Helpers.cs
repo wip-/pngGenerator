@@ -121,6 +121,15 @@ namespace pngGenerator
             //rgb.B = Convert.ToByte(b * 255.0f);
             return NormalizedColor.FromArgb(1, r, g, b);
         }
+
+        public static double Lerp(
+            double oldVal,
+            double oldMin, double oldMax,
+            double newMin, double newMax)
+        {
+            double newVal = newMin + (oldVal - oldMin) / (oldMax - oldMin) * (newMax - newMin);
+            return newVal;
+        }
     }
 
     public static class MyExtensions
@@ -143,4 +152,5 @@ namespace pngGenerator
             else return val;
         }
     }  
+    
 }
