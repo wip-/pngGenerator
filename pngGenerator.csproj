@@ -46,6 +46,7 @@
     <Compile Include="Generators\All260KColors.cs" />
     <Compile Include="Generators\All24bppColors.cs" />
     <Compile Include="Generators\AlphaGradation.cs" />
+    <Compile Include="Generators\AlphaGradation2d.cs" />
     <Compile Include="Generators\BaseGenerator.cs" />
     <Compile Include="Generators\Blue80Red20.cs" />
     <Compile Include="Generators\BlueRedGradation.cs" />
