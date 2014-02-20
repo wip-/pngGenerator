@@ -14,7 +14,7 @@ namespace pngGenerator.Generators
             for (int x = 0; x < BitmapWidth; x++)
             {
                 NormalizedColor color;
-                if( x<=BitmapWidth/2 )
+                if( x<BitmapWidth/2 )
                     color = Helpers.HSL2RGB( 0.5 + (double)x/BitmapWidth, 1.0, 0.5);
                 else
                     color = Helpers.HSL2RGB(-0.5 + (double)x/BitmapWidth, 1.0, 0.5);
