@@ -26,7 +26,7 @@ namespace pngGenerator
             // Just switch between generators HERE:
             //BaseGenerator generator = new All24bppColors();
             //BaseGenerator generator = new BlueRedGradation();
-            BaseGenerator generator = new HueGradationOffset();
+            BaseGenerator generator = new All32x32Colors();
 
 
 
