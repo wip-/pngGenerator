@@ -52,8 +52,10 @@
     <Compile Include="Generators\Blue80Red20.cs" />
     <Compile Include="Generators\BlueRedGradation.cs" />
     <Compile Include="Generators\Component.cs" />
+    <Compile Include="Generators\GrayscaleIcon.cs" />
     <Compile Include="Generators\HueBrightnessGradation.cs" />
     <Compile Include="Generators\HueGradation64.cs" />
+    <Compile Include="Generators\HueGradationIcon.cs" />
     <Compile Include="Generators\HueGradationOffset.cs" />
     <Compile Include="Generators\HueSaturationGradation.cs" />
     <Compile Include="Generators\HueSaturationGradationTogether.cs" />
