@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ColorMine">
+      <HintPath>packages\ColorMine.1.1.2\lib\ColorMine.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -46,11 +49,15 @@
     <Compile Include="Generators\All260KColors.cs" />
     <Compile Include="Generators\All24bppColors.cs" />
     <Compile Include="Generators\All32x32Colors.cs" />
+    <Compile Include="Generators\AllHSV.cs" />
     <Compile Include="Generators\AlphaGradation.cs" />
     <Compile Include="Generators\AlphaGradation2d.cs" />
     <Compile Include="Generators\BaseGenerator.cs" />
     <Compile Include="Generators\Blue80Red20.cs" />
     <Compile Include="Generators\BlueRedGradation.cs" />
+    <Compile Include="Generators\CieLab.cs" />
+    <Compile Include="Generators\CieLuv-Ugradation.cs" />
+    <Compile Include="Generators\CieLuv.cs" />
     <Compile Include="Generators\Component.cs" />
     <Compile Include="Generators\GrayscaleIcon.cs" />
     <Compile Include="Generators\HueBrightnessGradation.cs" />
@@ -74,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
