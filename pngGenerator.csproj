@@ -76,6 +76,7 @@
     <Compile Include="Generators\Square.cs" />
     <Compile Include="Generators\SquareBig.cs" />
     <Compile Include="Generators\Stripes.cs" />
+    <Compile Include="Generators\VerticalColorStripes.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Generators\HuePalette.cs" />
     <Compile Include="Program.cs" />
