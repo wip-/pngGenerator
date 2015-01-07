@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ColorMine">
-      <HintPath>packages\ColorMine.1.1.2\lib\ColorMine.dll</HintPath>
+      <HintPath>packages\ColorMine.1.1.3.0\lib\ColorMine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
