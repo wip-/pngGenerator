@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace pngGenerator
 {
@@ -129,6 +130,27 @@ namespace pngGenerator
         {
             double newVal = newMin + (oldVal - oldMin) / (oldMax - oldMin) * (newMax - newMin);
             return newVal;
+        }
+
+
+        [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
+        private static extern IntPtr ILCreateFromPathW(string pszPath);
+
+        [DllImport("shell32.dll")]
+        private static extern int SHOpenFolderAndSelectItems(IntPtr pidlFolder, int cild, IntPtr apidl, int dwFlags);
+
+        [DllImport("shell32.dll")]
+        private static extern void ILFree(IntPtr pidl);
+
+        // http://stackoverflow.com/a/14601675/758666
+        public static void OpenFolderAndSelectFile(string filePath)
+        {
+            if (filePath == null)
+                throw new ArgumentNullException("filePath");
+
+            IntPtr pidl = ILCreateFromPathW(filePath);
+            SHOpenFolderAndSelectItems(pidl, 0, IntPtr.Zero, 0);
+            ILFree(pidl);
         }
     }
 

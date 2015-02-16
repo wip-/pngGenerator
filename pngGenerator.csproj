@@ -59,6 +59,7 @@
     <Compile Include="Generators\CieLab.cs" />
     <Compile Include="Generators\CieLuv-Ugradation.cs" />
     <Compile Include="Generators\CieLuv.cs" />
+    <Compile Include="Generators\Compare16x16x16Colors.cs" />
     <Compile Include="Generators\Component.cs" />
     <Compile Include="Generators\GammaTest.cs" />
     <Compile Include="Generators\GrayscaleIcon.cs" />

@@ -24,9 +24,9 @@ namespace pngGenerator
         static private bool Sub()
         {
             // Just switch between generators HERE:
-            //BaseGenerator generator = new All24bppColors();
+            BaseGenerator generator = new Compare16x16x16Colors();
             //BaseGenerator generator = new BlueRedGradation();
-            BaseGenerator generator = new VerticalColorStripes();
+            //BaseGenerator generator = new All16x16x16Colors();
 
 
 
@@ -43,8 +43,12 @@ namespace pngGenerator
             bitmap.Save(fileName, ImageFormat.Png);
 
             // select new file
-            Process.Start("explorer.exe", @"/select,""" + AppDomain.CurrentDomain.BaseDirectory + fileName + "\"");
-                        
+          //Process.Start("explorer.exe", @"/select,""" + AppDomain.CurrentDomain.BaseDirectory + fileName + "\"");
+            //Helpers.OpenFolderAndSelectFile(AppDomain.CurrentDomain.BaseDirectory + fileName);
+
+            // call viewer
+            Process.Start(AppDomain.CurrentDomain.BaseDirectory + fileName);
+   
             return true;
         }
     }
